@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yacht Lab Extension Demo</title>
+    <link rel="stylesheet" href="./demo.css" />
+    <link rel="stylesheet" href="../overlay.css" />
+  </head>
+  <body>
+    <div id="new-game-modal" style="display: none"></div>
+
+    <header class="game-nav">
+      <div class="game-title">
+        <span class="logo-die">⚄</span>
+        <div><strong>Yahtzee</strong><small>ROOM · DEMO</small></div>
+      </div>
+      <nav><span>How to Play</span><span>Games</span><span>Language</span></nav>
+    </header>
+
+    <main class="game-shell">
+      <section class="room-heading">
+        <div>
+          <span class="room-label">LIVE GAME</span>
+          <h1>Friday Night Dice</h1>
+        </div>
+        <div class="room-code">ROOM <b>LUCKY-6</b></div>
+      </section>
+
+      <section class="scoreboard" aria-label="Score sheet">
+        <div class="board-title">SCORE SHEET</div>
+        <div class="board-grid board-head">
+          <div class="category-label">CATEGORY</div>
+          <div class="cell player-col player-info me-info current-turn" aria-label="Alex, current turn">
+            <span class="turn-dot"></span>
+            <b>Alex</b>
+            <small>YOU</small>
+          </div>
+          <div class="cell player-col player-info"><b>Mina</b><small>WAITING</small></div>
+          <div class="cell player-col player-info"><b>Joon</b><small>WAITING</small></div>
+        </div>
+        <div id="score-rows"></div>
+      </section>
+
+      <section class="dice-zone">
+        <div class="turn-copy">
+          <span>YOUR TURN</span>
+          <h2>Roll or score</h2>
+          <p>Yacht Lab이 화면을 자동으로 읽고 있습니다.</p>
+        </div>
+        <div class="dice-area">
+          <div class="dice-row" id="dice-row"></div>
+          <button class="roll-button" id="roll-dice" type="button" aria-label="Roll Dice">
+            <span>ROLL DICE</span>
+            <span class="roll-markers">
+              <i id="roll-1">●</i><i id="roll-2">②</i><i id="roll-3">③</i>
+            </span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="demo-footer">
+      <span>YACHT LAB DEMO FIXTURE</span>
+      <span>3 PLAYERS · ROUND 08</span>
+    </footer>
+
+    <script src="./demo.js"></script>
+    <script src="../strategy.js"></script>
+    <script src="../content.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Yacht Lab for BuddyBoardGames",
+  "version": "1.1.0",
+  "description": "BuddyBoardGames 야찌 화면을 읽고 가장 높은 기대점수의 보류 전략을 표시합니다.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://buddyboardgames.com/yahtzee*",
+        "https://www.buddyboardgames.com/yahtzee*"
+      ],
+      "js": ["strategy.js", "content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
